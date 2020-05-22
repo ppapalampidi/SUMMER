@@ -98,7 +98,7 @@ for i in range(10):
     ####################################################################
     # Model
     ####################################################################
-    pretrained_model = torch.load('../checkpoints/student.pt',
+    pretrained_model = torch.load('./checkpoints/student.pt',
                                   map_location='cpu')
 
     model = SUMMER_supervised(config["model"],

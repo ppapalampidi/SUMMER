@@ -51,7 +51,7 @@ dataset = CSI(data, labels, max_scene_length=config["data"]["max_scene_length"])
 
 loader = DataLoader(dataset, shuffle=False, collate_fn=MovieCollate_CSI())
 
-pretrained_model = torch.load('../checkpoints/student.pt',
+pretrained_model = torch.load('./checkpoints/student.pt',
                               map_location='cpu')
 
 model = SUMMER_unsupervised(config["model"],

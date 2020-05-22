@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     targets = [y for x in train_set.data for z in x["labels_tps"] for y in z]
 
-    model = torch.load('../checkpoints/teacher.pt', map_location='cpu')
+    model = torch.load('./checkpoints/teacher.pt', map_location='cpu')
     model.to(opts.device)
 
     print(model)
