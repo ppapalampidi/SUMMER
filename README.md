@@ -17,12 +17,8 @@ We use these two models for *pre-training a network on TP identification*.
 Finally, we include two versions of **SUMMER**:
 
 - **Unsupervised**: structure-aware version of directed neural TextRank [2]. We modify the centrality calculation of each scene as follows:
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + f_j) + \lambda_2  \sum_{j>i}(e_{ij} + f_i)$
 
-<p align="center">
-\begin{equation}
-\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + f_j) + \lambda_2  \sum_{j>i}(e_{ij} + f_i)
-\end{equation}
-</p>
 
 - **Supervised**: we decide about whether to include a scene into the episode summary based on its content and *salience*. We define the salience of a scene as the degree of its similarity with the storyline of the episode. We further consider the storyline of an episode as the set of key events (TPs) that have been identified in the latent space. Here is an overview of the supervised SUMMER:
 
