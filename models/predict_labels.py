@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 import pickle
 
 import sys
-sys.path.append('../')
+sys.path.append('./')
 from modules.data.collates import MovieCollate
 from modules.data.datasets import TRIPOD
 from utils.opts import train_options
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     print("Building training dataset...")
 
-    with open(os.path.join(DATA_DIR, "train_all_revised_{}.pickle".
+    with open(os.path.join(DATA_DIR, "train_TRIPOD_{}.pickle".
             format(config["data"]["encoder"])), "rb") as f:
         train_data = pickle.load(f)
 

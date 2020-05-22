@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 import pickle
 import numpy
 import sys
-sys.path.append('../')
+sys.path.append('./')
 
 from models.baseline_trainer import Trainer_SUMMER
 from modules.data.collates import MovieCollate_CSI

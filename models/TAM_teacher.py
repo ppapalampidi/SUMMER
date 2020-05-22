@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 import pickle
 
 import sys
-sys.path.append('../')
+sys.path.append('./')
 from models.baseline_trainer import BaselineTrainer
 from modules.data.collates import MovieCollate
 from modules.data.datasets import TRIPOD

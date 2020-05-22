@@ -6,7 +6,7 @@ import pickle
 
 import sys
 
-sys.path.append('../')
+sys.path.append('./')
 from models.baseline_trainer import BaselineTrainer_Screenplays
 from modules.data.collates import MovieCollate
 from modules.data.datasets import TRIPOD
