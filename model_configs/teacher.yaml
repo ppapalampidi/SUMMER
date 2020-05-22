@@ -1,0 +1,39 @@
+checkpoint_interval: 5000
+eval_interval: 500
+log_interval: 50
+batch_size: 1
+epochs: 15
+num_workers: 1
+optim: adam
+data:
+  binary: True # binary or ordinal labels per scene
+  encoder: USE
+  mu: [0.1139, 0.3186, 0.5065, 0.7415, 0.8943]
+  sigma: [0.0672, 0.1129, 0.1215, 0.0840, 0.0474]
+  max_plot_length: 40
+  max_scene_sent_length: 20
+  max_scene_length: 100
+model:
+  clip: 0.1
+  input_size: 512 # depends on the sentence embeddings
+
+  plot_encoder_size: 64
+  plot_encoder_layers: 1
+  plot_encoder_dropout: 0.0
+  plot_encoder_bidirectional: True
+
+  scene_encoder_size: 64
+  scene_encoder_layers: 1
+  scene_encoder_dropout: 0.0
+  scene_encoder_bidirectional: True
+
+  script_encoder_size: 64
+  script_encoder_layers: 1
+  script_encoder_dropout: 0.0
+  script_encoder_bidirectional: True
+
+  interaction_layers: 1
+  interaction_dropout: 0.2
+  interaction_activation: "tanh"
+
+  context_window: 0.2
