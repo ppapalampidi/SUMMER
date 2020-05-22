@@ -25,7 +25,7 @@ $\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + f_j) + \lambda_2  \su
 - **Supervised**: we decide about whether to include a scene into the episode summary based on its content and *salience*. We define the salience of a scene as the degree of its similarity with the storyline of the episode. We further consider the storyline of an episode as the set of key events (TPs) that have been identified in the latent space. Here is an overview of the supervised SUMMER:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/SUMMER/master/SUMMER.png" height="70">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/SUMMER/master/SUMMER.png" height="700">
 </p>
 
 ## Datasets & Pre-processing
