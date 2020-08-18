@@ -103,5 +103,5 @@ if __name__ == '__main__':
             final_preds.update({names[w]: final_neighborhood[-1]})
             final_distributions.update({names[w]: final_posteriors[-1]})
 
-    with open('../dataset/labels_train_silver.pickle', 'wb') as f:
+    with open('./dataset/labels_train_TRIPOD_silver.pickle', 'wb') as f:
         pickle.dump(final_preds, f, protocol=pickle.HIGHEST_PROTOCOL)
