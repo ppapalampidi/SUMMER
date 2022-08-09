@@ -141,7 +141,7 @@ def get_class_weights(y):
     :return: dictionary with the weight for each class
     """
 
-    weights = compute_class_weight('balanced', numpy.unique(y), y)
+    weights = compute_class_weight(class_weight = 'balanced', classes = numpy.unique(y), y=y)
 
     d = {c: w for c, w in zip(numpy.unique(y), weights)}
 
